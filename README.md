@@ -3,7 +3,6 @@ Homework 2.
 
 
 Создать ветку от существующего проекта gitHub: https://github.com/AndesTechConsulting3/JavaSE-Day05-Homework2.git
-бавить
 Имя ветки должно содержать строку rfb, например VasilyPetrov-rfb-branch-home2.
 
 Создать класс Customer Создать поля firstName, secondName, address.
@@ -11,10 +10,10 @@ Homework 2.
 Добавить абстрактные методы withdrawal, putMoney.
 (можно скопировать часть из предыдущей дом. работы)
 
-Создать классы DebitAccount и CreditAccound как потомки Account.
+Создать классы счетов DebitAccount и CreditAccound как потомки Account.
 Реализовать методы withdrawal, putMoney.
 
-Конструктор в CreditAccount сделать закрытым. Создание счёта сделать через фабричный метод.
+Конструктор в классе CreditAccount сделать закрытым. Создание счёта сделать через фабричный метод.
 При этом в методе должна проверяться "кредитная история" и в случае отказа,
 счёт создаваться не должен.
 
