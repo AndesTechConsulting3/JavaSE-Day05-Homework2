@@ -32,7 +32,7 @@ public class App
 
         CreditAccount cracc = new CreditAccount(customer, -1500, "tgbvfr3545");
         cracc.withdrawal(2500);
-        cracc.putMoney(4000);
+        cracc.putMoney(4001);
         System.out.println(cracc.PrintCreditAccount());
 
     }

@@ -1,9 +1,10 @@
 package org.andestech.learning.rfb19.g3;
 
 public class CreditAccount extends Account {
+//public class CreditAccount implements CrAcc{
 
     double bb = 0;
-    private static int minBal=-5000, maxBal=15000, minW=0, maxW=10000, minD=0, maxD=15000;
+    public static int minBal=-5000, maxBal=15000, minW=0, maxW=10000, minD=0, maxD=15000;
 
     public CreditAccount(Customer customer, double balance, String accountId) {
         super(customer, balance, accountId);
