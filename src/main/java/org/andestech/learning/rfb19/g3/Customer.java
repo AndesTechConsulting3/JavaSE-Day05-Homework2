@@ -1,0 +1,30 @@
+package org.andestech.learning.rfb19.g3;
+
+public class Customer {
+
+    private String firstName, secondName, address;
+    private int age;
+
+    public Customer(String firstName, String secondName, String address, int age) {
+        this.firstName = firstName;
+        this.secondName = secondName;
+        this.address = address;
+        this.age = age;
+    }
+
+    private String getCustomerInfo(){
+        return
+                "FirstName: " + firstName +
+                 ", SecondName: " + secondName +
+                 ", Address: " + address +
+                ", What's My Age Again?" + age;}
+
+    public void printCustomerInfo(){
+
+        System.out.println(getCustomerInfo());
+    }
+
+    public Customer(){
+        System.out.println("++ ctor, Customer: " + this);
+    }
+}
