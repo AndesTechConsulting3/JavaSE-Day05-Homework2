@@ -1,28 +1,35 @@
 package org.andestech.learning.rfb19.g3;
 
-public class DebitAccount extends Account {
+public class CreditAccount extends Account {
+
+    double bb = 0;
+    private static int minBal=-5000, maxBal=15000, minW=0, maxW=10000, minD=0, maxD=15000;
+
+    public CreditAccount(Customer customer, double balance, String accountId) {
+        super(customer, balance, accountId);
+        if(balance >= minBal && balance <= maxBal ) this.balance = balance;
+        else System.out.println("Account opening failed!");
+    }
 
     //double s = 100;
-    double bb = 0;
-    private static int minBal=0, maxBal=15000, minW=0, maxW=10000, minD=0, maxD=15000;
 
     @Override
     public void withdrawal(double sum) {
         //setBalance(s);
         if(balance >= minBal && balance <= maxBal )
-        {   if (sum < balance)
-            { if (sum > minW && sum < maxW) {
-                bb = getBalance();
-                setBalance(bb - sum);
-                System.out.println(
-                        "Before bal: " + bb +
-                                " Withdraw: -" + sum +
-                                " After operation bal: " + getBalance());
-            }
+        {   if ((balance - sum) >= minBal)
+        { if (sum > minW && sum < maxW) {
+            bb = getBalance();
+            setBalance(bb - sum);
+            System.out.println(
+                    "Before bal: " + bb +
+                            " Withdraw: -" + sum +
+                            " After operation bal: " + getBalance());
+        }
         else System.out.println("Sum exceeds limits " + minW + " < " + sum + " < " + maxW);}
         else System.out.println("Withdrawal " + sum + " > your balance " + balance);}
         else System.out.println("Incorrect balance! " + balance);
-        }
+    }
 
     @Override
     public void putMoney(double sum) {
@@ -40,18 +47,8 @@ public class DebitAccount extends Account {
         else System.out.println("Incorrect balance! " + balance);
     }
 
-    public DebitAccount(Customer customer, double balance, String accountId
-            //, double s
-    ) {
-        super(customer, balance, accountId);
-        //this.s = s;
-    }
-
-    public String PrintDebitAccount(){return "Name: " + customer.getFirstName() + ", \nSurname: " + customer.getSecondName() +
+    public String PrintCreditAccount(){return "Name: " + customer.getFirstName() + ", \nSurname: " + customer.getSecondName() +
             ", \nAddress: " + customer.getAddress() + ", \nWhat's My Age Again? " + customer.getAge() +
             ", \nAccountId: " + accountId + ", \nBalance: " + balance;}
 
-//    public DebitAccount(double s) {
-//        this.s = s;
-//    }
 }

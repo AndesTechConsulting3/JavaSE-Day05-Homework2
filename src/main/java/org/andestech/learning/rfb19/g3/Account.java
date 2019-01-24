@@ -17,8 +17,8 @@ public abstract class Account {
         this.balance = balance;
     }
 
-    private double balance;
-    private String accountId;
+    public double balance;
+    public String accountId;
     Customer customer;
 
     private String getAccountinfo(){
@@ -28,6 +28,12 @@ public abstract class Account {
 
     public void printAccountInfo(){
         System.out.println(getAccountinfo());
+    }
+
+    public String printAccountInfoFull() {
+        return "Name: " + customer.getFirstName() + ", \nSurname: " + customer.getSecondName() +
+                ", \nAddress: " + customer.getAddress() + ", \nWhat's My Age Again? " + customer.getAge() +
+                ", \nAccountId: " + accountId + ", \nBalance: " + balance;
     }
 
     public Account(){

@@ -2,6 +2,22 @@ package org.andestech.learning.rfb19.g3;
 
 public class Customer {
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getSecondName() {
+        return secondName;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
     private String firstName, secondName, address;
     private int age;
 
@@ -17,7 +33,7 @@ public class Customer {
                 "FirstName: " + firstName +
                  ", SecondName: " + secondName +
                  ", Address: " + address +
-                ", What's My Age Again?" + age;}
+                ", What's My Age Again? " + age;}
 
     public void printCustomerInfo(){
 
