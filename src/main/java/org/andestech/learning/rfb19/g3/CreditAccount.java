@@ -4,11 +4,11 @@ import java.util.Random;
 
 public class CreditAccount extends Account {
 
-    protected static final int AgeMin=22, AgeMax=98;
+    protected static final int AgeMin=18, AgeMax=91;
     @Override
     public void putMoney(Integer Summ) {
         if (Summ >= MinPut && Summ <= MaxPutMax)this.balance += Summ;
-        else System.out.println("вышkи за границы");
+        else System.out.println("вышли за границы");
     }
 
     @Override

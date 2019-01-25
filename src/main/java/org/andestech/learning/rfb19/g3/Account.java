@@ -42,6 +42,6 @@ public abstract class Account {
 //
 //    }
 
-    protected static final int MinWithdraw=10, MaxWithdraw=10000;
-    protected static final int MinPut=20, MaxPutMax=20000;
+    protected static final int MinWithdraw=10, MaxWithdraw=1000000;
+    protected static final int MinPut=20, MaxPutMax=2000000;
 }
