@@ -18,8 +18,8 @@ public class Customer {
         return age;
     }
 
-    private String firstName, secondName, address;
-    private int age;
+    public String firstName, secondName, address;
+    public int age;
 
     public Customer(String firstName, String secondName, String address, int age) {
         this.firstName = firstName;

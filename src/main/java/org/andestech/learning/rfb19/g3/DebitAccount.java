@@ -3,14 +3,14 @@ package org.andestech.learning.rfb19.g3;
 public class DebitAccount extends Account {
 
     //double s = 100;
-    double bb = 0;
-    private static int minBal=0, maxBal=15000, minW=0, maxW=10000, minD=0, maxD=15000;
+    private double bb = 0;
+    private static final int minBal=0, maxBal=15000, minW=0, maxW=10000, minD=0, maxD=15000;
 
     @Override
     public void withdrawal(double sum) {
         //setBalance(s);
-        if(balance >= minBal && balance <= maxBal )
-        {   if (sum < balance)
+        if(balance >= minBal && balance <= maxBal)
+        {   if (sum < balance)                     //все три условия необходимы и независимы
             { if (sum > minW && sum < maxW) {
                 bb = getBalance();
                 setBalance(bb - sum);
@@ -20,7 +20,7 @@ public class DebitAccount extends Account {
                                 " After operation bal: " + getBalance());
             }
         else System.out.println("Sum exceeds limits " + minW + " < " + sum + " < " + maxW);}
-        else System.out.println("Withdrawal " + sum + " > your balance " + balance);}
+        else System.out.println("Withdrawal " + sum + " > than your balance " + balance);}
         else System.out.println("Incorrect balance! " + balance);
         }
 
