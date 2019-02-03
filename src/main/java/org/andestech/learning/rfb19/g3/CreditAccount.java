@@ -16,9 +16,10 @@ public class CreditAccount extends Account {
     }
 
     public static Account getCreditAccount(Customer customer, double balance, String accountId){
-        if (customer.age >= minAge && customer.age <= maxAge){
-        return new CreditAccount(customer,balance,accountId);}
-        else throw new IndexOutOfBoundsException("Некорректный возраст");
+        //if (customer.age >= minAge && customer.age <= maxAge){
+        return new CreditAccount(customer,balance,accountId);
+        //}
+        //else throw new IndexOutOfBoundsException("Некорректный возраст");
     }
 
     //double s = 100;

@@ -10,7 +10,7 @@ public class DebitAccount extends Account {
     public void withdrawal(double sum) {
         //setBalance(s);
         if(balance >= minBal && balance <= maxBal)
-        {   if (sum < balance)                     //все три условия необходимы и независимы
+        {   if (sum < balance)                     //все три условия необходимы
             { if (sum > minW && sum < maxW) {
                 bb = getBalance();
                 setBalance(bb - sum);
