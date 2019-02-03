@@ -7,8 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="JavaSE-Day05-Homework2" />
+        <module name="JavaSE-HomeWork2" />
         <module name="JavaSEHomeWork2" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="JavaSE-HomeWork2" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>
