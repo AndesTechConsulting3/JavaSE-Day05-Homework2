@@ -6,25 +6,25 @@ public class Customer {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+//    public void setFirstName(String firstName) {
+//        this.firstName = firstName;
+//    }
 
     public String getSecondName() {
         return secondName;
     }
 
-    public void setSecondName(String secondName) {
-        this.secondName = secondName;
-    }
+//    public void setSecondName(String secondName) {
+//        this.secondName = secondName;
+//    }
 
     public String getAddress() {
         return address;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
+//    public void setAddress(String address) {
+//        this.address = address;
+//    }
 
     public Integer getAge() {
         return age;
@@ -47,14 +47,13 @@ public class Customer {
     public String getCustomerInfо(){
         return
                 "First Name: " + firstName + ", " +
-                        "Second Name: " + secondName  + ", " + "Age:" + age + ", " +
+                        "Second Name: " + secondName  + ", " + "Age: " + age + ", " +
                         "Address: " + address;
     }
 
     public void printCustomerinfo()
-   {
+    {
         System.out.println(getCustomerInfо());
 
     }
 }
-
