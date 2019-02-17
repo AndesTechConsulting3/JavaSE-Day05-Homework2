@@ -6,8 +6,8 @@ public Customer customer;
 public int balance;
 public String accountId;
 
-    abstract void withDrawal(Account account, int deltaBalance);
+    abstract void withDrawal(int deltaBalance);
 
-    abstract void putMoney(Account balance, int deltaBalance);
+    abstract void putMoney(int deltaBalance);
 
 }
