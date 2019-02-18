@@ -17,7 +17,7 @@ public class CrediitAccount extends Account {
         else System.out.println("вышли за границы");
     }
 
-    public CrediitAccount() {
+    public CrediitAccount(Customer customer) {
         this.accountId = new Random().nextInt();
     }
 
@@ -28,6 +28,6 @@ public class CrediitAccount extends Account {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return new CrediitAccount();
+        return new CrediitAccount(customer);
     }
 }
