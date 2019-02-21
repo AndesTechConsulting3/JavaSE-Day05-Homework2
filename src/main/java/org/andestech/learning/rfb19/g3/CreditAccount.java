@@ -7,11 +7,19 @@ public class CreditAccount extends Account {
 
     private CreditAccount(Integer accountId, Customer customer, double balance) {
         super(accountId, customer, balance);
-        if (customer.age >= AgeMin && customer.age < AgeMax){
+//        if (customer.age >= AgeMin && customer.age < AgeMax){
             this.balance = balance;
             this.accountId = accountId;
-            this.customer = customer;}
-        else System.out.println("Клиент не подходит!");
+            this.customer = customer;
+//    }
+//        else System.out.println("Клиент не подходит!");
+    }
+
+    public static Account generateCreditAccount(Integer accountId, Customer customer, double balance) {
+        if (customer.age >= AgeMin && customer.age <= AgeMax) {
+            return new CreditAccount(accountId, customer, balance);
+        } else System.out.println("Клиент не подходит!");
+        return null;
     }
 
     @Override
@@ -26,10 +34,6 @@ public class CreditAccount extends Account {
         else System.out.println("Укажите другую сумму!");
     }
 
-
-    public static Account generateCreditAccount(Integer accountId, Customer customer, double balance){
-        return new CreditAccount(accountId,customer,balance);
-    }
 }
 
 
