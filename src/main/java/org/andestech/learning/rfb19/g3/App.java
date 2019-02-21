@@ -5,7 +5,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        Customer customer = new Customer("Anna", "Lukicheva", 34, "Москва, Рогова, 7 к2");
+        Customer customer = new Customer("Anna", "Lukicheva", 67, "Москва, Рогова, 7 к2");
 
         Account creditAccount = CreditAccount.generateCreditAccount(445556,customer,9000);
         System.out.println("Account ID:" + creditAccount.accountId);
