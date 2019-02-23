@@ -18,6 +18,11 @@ public abstract class Account {
     }
 
     public double balance;
+
+    public String getAccountId() {
+        return accountId;
+    }
+
     public String accountId;
     Customer customer;
 

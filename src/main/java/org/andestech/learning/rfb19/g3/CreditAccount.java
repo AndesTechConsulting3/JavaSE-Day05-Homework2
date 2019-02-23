@@ -4,22 +4,26 @@ public class CreditAccount extends Account {
 //public class CreditAccount implements CrAcc{
 
     private double bb = 0;
-    private static final int minBal=-5000, maxBal=15000, minW=0, maxW=10000, minD=0, maxD=15000, minAge=18, maxAge=70;
+    private static final int minBal=-5000, maxBal=15000, minW=0, maxW=10000, minD=0, maxD=15000, minAge=18, maxAge=70, maxCH = 2;
+//    private double balance;
+//    private String accountId;
+//    private Customer customer;
 
     private CreditAccount(Customer customer, double balance, String accountId) {
-        super(customer, balance, accountId);
-        if((balance >= minBal && balance <= maxBal ) && (customer.age >= minAge && customer.age <= maxAge)){
+        //super(customer, balance, accountId);
+        //if((balance >= minBal && balance <= maxBal ) && (customer.age >= minAge && customer.age <= maxAge)){
             this.balance = balance;
             this.accountId = accountId;
-            this.customer = customer;}
-        else System.out.println("Account opening failed!");
+            this.customer = customer;
+    //}
+    //    else System.out.println("Account opening failed!");
     }
 
-    public static Account getCreditAccount(Customer customer, double balance, String accountId){
-        //if (customer.age >= minAge && customer.age <= maxAge){
-        return new CreditAccount(customer,balance,accountId);
-        //}
-        //else throw new IndexOutOfBoundsException("Некорректный возраст");
+    public static Account getCreditAccount(Customer customer, double balance, String accountId, int CreditHistory){
+        if (customer.getAge() >= minAge && customer.getAge() <= maxAge && CreditHistory <= maxCH ) {
+            return new CreditAccount(customer, balance, accountId);
+        }
+        return null;
     }
 
     //double s = 100;
@@ -28,7 +32,7 @@ public class CreditAccount extends Account {
     public void withdrawal(double sum) {
         //setBalance(s);
         if(balance >= minBal && balance <= maxBal )
-        {   if ((balance - sum) >= minBal)
+        { if ((balance - sum) >= minBal)
         { if (sum > minW && sum < maxW) {
             bb = getBalance();
             setBalance(bb - sum);

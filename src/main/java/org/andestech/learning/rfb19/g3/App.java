@@ -10,18 +10,18 @@ public class App
 
         //Account account = new Account("12345678900987654321", 10500, "qazwsx1234");
         //account.printAccountInfo();
-        Account acc = new Account() {
-            //@Override
-            public void withdrawal(double sum) {
-            }
-            //@Override
-            public void putMoney(double sum) {
-            }
-        };
+//        Account acc = new Account() {
+//            //@Override
+//            public void withdrawal(double sum) {
+//            }
+//            //@Override
+//            public void putMoney(double sum) {
+//            }
+//        };
 
         //System.out.println(acc.printAccountInfoFull());
         //acc.printAccountInfo();
-        System.out.println("-------------------------------------------");
+        //System.out.println("-------------------------------------------");
 
         DebitAccount dbacc = new DebitAccount(customer, 13000, "qazwsx1234");
         dbacc.withdrawal(11000);
@@ -31,7 +31,7 @@ public class App
         System.out.println("-------------------------------------------");
 
         //CreditAccount cracc = new CreditAccount(customer, -1500, "tgbvfr3545");
-        Account cracc = CreditAccount.getCreditAccount(customer, -1500, "tgbvfr3545");
+        Account cracc = CreditAccount.getCreditAccount(customer, -1500, "tgbvfr3545", 2);
         cracc.withdrawal(2500);
         cracc.putMoney(4150);
         System.out.println(cracc.printAccountInfoFull());

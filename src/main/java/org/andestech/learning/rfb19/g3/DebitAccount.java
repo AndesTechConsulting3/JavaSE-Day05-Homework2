@@ -43,8 +43,11 @@ public class DebitAccount extends Account {
     public DebitAccount(Customer customer, double balance, String accountId
             //, double s
     ) {
-        super(customer, balance, accountId);
+        //super(customer, balance, accountId);
         //this.s = s;
+        this.balance = balance;
+        this.accountId = accountId;
+        this.customer = customer;
     }
 
     public String PrintDebitAccount(){return "Name: " + customer.getFirstName() + ", \nSurname: " + customer.getSecondName() +
